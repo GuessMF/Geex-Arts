@@ -10,14 +10,11 @@ import {BrowserRouter as Router} from "react-router-dom";
 //   </React.StrictMode>
 // );
 
-const PUBLIC_URL =
-  import.meta.env.BASE_URL || "https://GuessMF.github.io/Geex-Arts";
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 //const history = createMemoryHistory();
 
 root.render(
-  <Router>
+  <Router basename="/Geex-Arts">
     <App />
   </Router>
 );
