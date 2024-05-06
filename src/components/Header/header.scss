@@ -1,4 +1,49 @@
+@import "../../assets/style/var";
 .header {
   width: 100%;
-  background-color: red;
+
+  // padding: 14px 40px;
+  padding: 14px 0;
+  background: $grayscale00;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  img {
+    // border: black 1px solid;
+  }
+  &__nav {
+    max-width: 730px;
+    width: 100%;
+    // margin: 0 20px;
+    margin-left: 50px;
+    margin-right: auto;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        padding: 8px;
+        // border: black 1px solid;
+        font-size: 14px;
+        p {
+          color: $grayscale40;
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,32 @@
+@import "../../../assets/style/var";
+.filter {
+  padding: 24px 20px;
+  background: $grayscale00;
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: -0.7px;
+    color: $grayscale70;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+    li {
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      padding: 10px;
+      border-radius: 10px;
+      //   border: black 1px solid;
+      &:first-child {
+        background-color: $grayscale20;
+      }
+      p {
+        color: $grayscale50;
+      }
+    }
+  }
+}

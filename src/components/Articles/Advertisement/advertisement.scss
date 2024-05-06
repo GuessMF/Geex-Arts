@@ -1,0 +1,50 @@
+@import "../../../assets/style/var";
+.advertisement {
+  background-image: url("../../../assets/images/advertisement_bg.webp");
+  background-position: center;
+  height: 540px;
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &__content {
+    margin-bottom: 40px;
+    &-top {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      &__box {
+        background-color: $grayscale70;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+      }
+      img {
+        width: 22.7px;
+        height: 20.5px;
+      }
+      h2 {
+        padding: 3px 8px;
+        &:nth-child(2) {
+          background-color: $grayscale30;
+        }
+        &:nth-child(3) {
+          color: $grayscale00;
+          background-color: $grayscale40;
+          span {
+            // color: $grayscale40;
+            opacity: 50%;
+          }
+        }
+      }
+    }
+    &-bottom {
+      background: $grayscale00;
+      padding: 13px 22px 13px 32px;
+    }
+  }
+}
