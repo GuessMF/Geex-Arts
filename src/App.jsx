@@ -1,18 +1,23 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import React from "react";
+import {Routes, Route} from "react-router-dom";
 
+import "./assets/style/app.scss";
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
+import Users from "./components/Users/Users";
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      <div className="app">
+        <Header />
+
+        {/* <Main /> */}
       </div>
+
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/users" element={<Users />} />
+      </Routes>
     </>
   );
 }

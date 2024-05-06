@@ -1,0 +1,11 @@
+.app {
+  border: black 1px solid;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
