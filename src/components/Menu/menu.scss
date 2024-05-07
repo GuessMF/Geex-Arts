@@ -1,0 +1,39 @@
+@import "../../assets/style/var";
+.menu {
+  width: 100%;
+  height: 100vh;
+  background-color: $grayscale00;
+  margin-top: 66px;
+  transform: translateX(100%);
+  transition: 0.2s ease-in transform;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 200;
+
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+
+  &__nav {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      a {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        color: $grayscale40;
+        font-weight: 548;
+        font-size: 14px;
+        letter-spacing: -0.5px;
+        line-height: 20px;
+        padding: 16px 8px;
+      }
+    }
+  }
+}
+.opened {
+  transform: translateX(0);
+}

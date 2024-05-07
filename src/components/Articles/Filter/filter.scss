@@ -20,12 +20,19 @@
       gap: 12px;
       padding: 10px;
       border-radius: 10px;
-      //   border: black 1px solid;
+      cursor: pointer;
       &:first-child {
         background-color: $grayscale20;
       }
       p {
         color: $grayscale50;
+      }
+
+      transition: 0.2s ease-in-out background;
+      @media (hover: hover) {
+        &:hover {
+          background-color: $grayscale20;
+        }
       }
     }
   }

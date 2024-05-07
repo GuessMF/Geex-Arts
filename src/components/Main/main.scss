@@ -1,26 +1,42 @@
 @import "../../assets/style/var";
 
 .main {
-  // background-color: blue;
   .wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 24px;
+    @media (max-width: 868px) {
+      flex-direction: column;
+    }
   }
   &__content {
-    width: 100%;
+    width: auto;
     max-width: 765px;
-    // border-radius: 20px;
-    // border: black 1px solid;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    max-width: 100%;
+    @media (max-width: 1040px) {
+      width: 67%;
+    }
+    @media (max-width: 868px) {
+      width: 100%;
+    }
   }
   &__sidebar {
-    // background: $grayscale40;
-    // border: black 1px solid;
     display: flex;
     flex-direction: column;
     gap: 24px;
     max-width: 371px;
-    width: 100%;
+    width: auto;
+    @media (max-width: 1040px) {
+      width: 30%;
+    }
+    @media (max-width: 868px) {
+      width: 100%;
+      max-width: none;
+    }
   }
 }

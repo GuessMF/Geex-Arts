@@ -1,0 +1,84 @@
+@import "../../../assets/style/var";
+
+.persons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 28px 20px;
+  background: $grayscale00;
+  @media (max-width: 600px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    align-items: center;
+  }
+
+  &__card {
+    height: 230px;
+    width: 100%;
+    max-width: 174px;
+    border-radius: 14px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 900px) {
+      margin: 0 auto;
+      max-width: 230px;
+    }
+
+    .text {
+      color: $grayscale00;
+      margin-top: 6px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .close__btn {
+      background: none;
+      width: 20px;
+      height: 20px;
+
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-self: flex-end;
+      img {
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    .subscribe__btn {
+      width: 100%;
+      background: $grayscale20;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 14px;
+      color: $grayscale70;
+      font-weight: 548;
+      letter-spacing: -0.5px;
+
+      transition: 0.2s ease-in-out background, 0.2s ease-in-out color;
+      @media (hover: hover) {
+        &:hover {
+          background: $grayscale70;
+          color: $grayscale20;
+        }
+      }
+    }
+  }
+
+  &__photo {
+    position: relative;
+    height: fit-content;
+    margin-top: 6px;
+
+    .nationality {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}

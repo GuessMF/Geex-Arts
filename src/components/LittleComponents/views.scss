@@ -1,0 +1,17 @@
+@import "../../assets/style/var";
+
+.views {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 10px;
+  width: fit-content;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.15);
+
+  .text {
+    margin: 0;
+    color: $grayscale00;
+  }
+}

@@ -9,12 +9,29 @@ import trophy_icon from "../../assets/icons/trophy_icon.svg";
 import building_icon from "../../assets/icons/building_icon.svg";
 import flag_icon from "../../assets/icons/flag.svg";
 import {NavLink} from "react-router-dom";
+import user_icon from "../../assets/icons/user.svg";
+import arrow_icon from "../../assets/icons/arrow.svg";
+import menu_icon from "../../assets/icons/menu.svg";
+import close_icon from "../../assets/icons/close_menu.svg";
 
-export default function Header() {
+export default function Header({modal, openModal, menuOpened, setMenuOpened}) {
+  const handleClick = () => {
+    openModal(!modal);
+  };
+
+  const handlOpenMenu = () => {
+    setMenuOpened(!menuOpened);
+  };
+
   return (
     <header className="header">
       <div className="wrapper">
         <img src={logo} />
+
+        <button className="menu__btn" onClick={handlOpenMenu}>
+          <img src={menuOpened ? close_icon : menu_icon} />
+        </button>
+
         <nav className="header__nav">
           <ul>
             <NavLink to="/">
@@ -38,8 +55,14 @@ export default function Header() {
             </NavLink>
           </ul>
         </nav>
-        <div>
+
+        <div className="change_country">
           <img src={flag_icon} />
+          <span>RU</span>
+          <img src={arrow_icon} />
+          <button className="auth__btn" onClick={handleClick}>
+            <img src={user_icon} />
+          </button>
         </div>
       </div>
     </header>

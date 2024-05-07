@@ -1,0 +1,129 @@
+@import "../../../assets/style/var";
+.greeting {
+  background-color: $grayscale00;
+  padding: 28px 20px;
+
+  &__list {
+    color: $grayscale40;
+    font-size: 12px;
+  }
+
+  .subscriber {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    &__photo {
+      position: relative;
+      .nationality {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+    &__content {
+      margin-right: auto;
+      overflow: hidden;
+      text-wrap: nowrap;
+      .text {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        img {
+          align-self: center;
+          margin-left: 5px;
+        }
+      }
+    }
+    &__list {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      li {
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        line-height: 18px;
+        color: $grayscale70;
+      }
+    }
+    &__add_btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: $grayscale20;
+      min-width: 40px;
+    }
+  }
+
+  &__place {
+    margin-top: 16px;
+    width: 100%;
+    background: $grayscale10;
+    border-radius: 12px;
+    padding: 12px 10px;
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      li:last-child {
+        color: $grayscale50;
+      }
+      .text {
+        text-align: center;
+      }
+    }
+
+    .first {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      color: $grayscale20;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      background: linear-gradient(
+        to right,
+        #be823b 0%,
+        #d0a461 64%,
+        #fed5a5 100%
+      );
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .social {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+    p {
+      &:last-child {
+        color: $grayscale50;
+      }
+    }
+  }
+
+  .congratulate__btn {
+    margin-top: 20px;
+    background: $grayscale70;
+    border-radius: 10px;
+    padding: 10px 24px;
+    color: $grayscale00;
+    font-weight: 548;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+  }
+}

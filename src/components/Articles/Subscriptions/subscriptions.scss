@@ -1,0 +1,104 @@
+@import "../../../assets/style/_var.scss";
+
+.subscriptions {
+  padding: 24px 20px;
+  background: $grayscale00;
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .subscriber {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      @media (max-width: 1040px) {
+        flex-direction: column;
+        align-items: center;
+      }
+      @media (max-width: 868px) {
+        display: flex;
+        flex-direction: row;
+      }
+      @media (max-width: 390px) {
+        flex-direction: column;
+        align-items: center;
+      }
+      &__photo {
+        position: relative;
+        .nationality {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+      }
+      &__content {
+        margin-right: auto;
+        .text {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          img {
+            align-self: center;
+            margin-left: 5px;
+          }
+        }
+      }
+      &__list {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        li {
+          font-size: 12px;
+          font-weight: 400;
+          letter-spacing: 0px;
+          line-height: 18px;
+          color: $grayscale70;
+        }
+      }
+      &__add_btn {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        border-radius: 10px;
+        background: $grayscale20;
+
+        @media (max-width: 1040px) {
+          width: 100%;
+        }
+        @media (max-width: 868px) {
+          width: 30px;
+        }
+        @media (max-width: 390px) {
+          width: 100%;
+        }
+
+        transition: 0.2s ease-in-out background;
+        @media (hover: hover) {
+          &:hover {
+            background: $grayscale40;
+          }
+        }
+      }
+    }
+  }
+  .view_all__btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background: $grayscale20;
+    border-radius: 10px;
+
+    transition: 0.2s ease-in-out background, 0.2s ease-in-out color;
+    @media (hover: hover) {
+      &:hover {
+        background: $grayscale70;
+        color: $grayscale20;
+      }
+    }
+  }
+}
